@@ -85,14 +85,20 @@ const pets = [
 
 // Problem #1 //
 function filterByMedication(array, medication){
-  
+ // if you return a value for this function you would then have console log the result 
+ //of invoking the function.
+ return array.filter()
 }
+console.log(filterByMedication(pets, 'Gabapentin'))
+  
 
 
 // Problem #2 //
 function speciesAndNumberOfMedications(array, species){
 
+
 }
+//console.log(speciesAndNumberOfMedications(pets, 'cat' ))
 
 // Problem #3 //
 function getDailyFrequency(array){
@@ -121,7 +127,8 @@ function filterByDailyFrequency(array){
 
 // Problem #8 // 
 function createEntriesByLocation(array, location){
-  
+return array
+.filter(pet => pet.location.includes(location));
 }
-
+console.log(createEntriesByLocation(pets, 'New Orleans'));
 
