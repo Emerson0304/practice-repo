@@ -58,8 +58,8 @@ The variable course is first declared using the keyword let
 outside the function code block and is giving the value
 'Bootcamp' this is a global scope (meaning I can reach it from anyway.)
 The console prints Bootcamp because 
-the inner scope variable don't affect the global varible.
-Which allows the outter variable and value to be executed
+the inner scope variable don't affect the global variable.
+This allows the outter variable and value to be executed
 once the function is called.
 
 
@@ -86,9 +86,9 @@ Explain why.
 ```
 Your answer here.
 Declaring a variable using the key word const 
-can not be reassigned. This causes the variable 
+can not be reassigned, This causes the variable 
 value not to change. Trying to reassign a value 
-should give a syntax error.
+using const should give a syntax error.
 
 ```
 
@@ -116,6 +116,6 @@ Your answer here.
 I think it would give an error because the code 
 is trying to log `orientationDate` which is declared inside 
 the if code block. Variables declared with the keyword const
-are blocked scoped, they are only be accessed within the block 
+are blocked scoped, they can only be accessed within the block 
 where it was defined.
 

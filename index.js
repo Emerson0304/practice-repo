@@ -86,9 +86,9 @@ const pets = [
 // Problem #1 //
 //Expected: To filter the pets array based on whether they have a treatment with a specified medication.
 function filterByMedication(array, medication){
-  //I created an arrow function as a callback function that takes a pet as its parameter and returns a boolean value.
+  //Arrow function as a callback function that takes a pet as its parameter and returns a boolean value.
  return array.filter(pet => pet.treatments.some(treatment => treatment.name === medication)).map(({ name }) => name)
-/* .some() check if at least one element in the `pet.treatments` array meets a specified condition.
+/* .some() checks if at least one element in the `pet.treatments` array meets a specified condition.
 it also checks if there is at least one treatment in the `pet.treatments` 
 array where the `treatment.name` is equal to the specified `medication`*/
 };
@@ -110,6 +110,7 @@ function getDailyFrequency(array){
   //Expected: To count the number of pets that have at least one treatment with a daily frequency.
   return array.filter(pet => pet.treatments.some(treatment => treatment.frequency === 'Daily' )).length;
 }
+// logging the result of invoking the getDailyFrequency function
 console.log(getDailyFrequency(pets));// 3
 
 // Problem #4 //
@@ -120,6 +121,8 @@ return array.map(pet => `name: ${pet.name} - age: ${pet.age} - species: ${pet.sp
 - treatments: ${pet.treatments.length}`
 );
 }
+
+// logging the result of invoking the createPetStrings function
 console.log(createPetStrings(pets));
 
 // Problem #5 //
@@ -134,7 +137,10 @@ containing name, species, and age of pets that match the specified species.*/
 
   }, []);
 }
+
+// logging the result of invoking the reduceSpecies function
 console.log(reduceSpecies(pets, 'cat'));
+// returns an array of objects with info about pets of the specified species.
 
 // Problem #6 //
 function namesAndMedications(array){
@@ -147,6 +153,7 @@ medication: pet.treatments.map(treatment => treatment.name)
   }
 });
 }
+//logging the result of invoking the namesAndMedications function
 console.log(namesAndMedications(pets));
 
 // Problem #7 //
@@ -156,7 +163,7 @@ function filterByDailyFrequency(array){
 return array.filter(({treatments}) => treatments.some(({frequency}) => frequency === 'Daily'))
 .map(({name}) => name);
 }
-
+// logging the result of invoking the filterByDailyFrequency function
 console.log(filterByDailyFrequency(pets));// [ <Noodles>, <Dezi>, <Bernie> ]
 
 // Problem #8 // 
@@ -168,5 +175,6 @@ each containing the pet's name and species */
    .filter(pet => pet.location.includes(location))
    .map(pet => [pet.name, pet.species]);
 }
+// logging the result of invoking the createEntriesByLocation function
 console.log(createEntriesByLocation(pets, 'New Orleans'));// [['Noodles', 'cat'], ['Dezi', 'cat']];
 
